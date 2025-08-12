@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Information</title>
+  <meta name="description" content="Contact form to send personal details, preferences, and a message." />
+</head>
+<body>
+  <header>
+    <h1>Contact information</h1>
+  </header>
+
+  <main>
+    <!-- CONTACT FORM -->
+    <form action="index.html" method="get">
+      <fieldset>
+        <legend>Personal information</legend>
+
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="2"
+          autocomplete="name"
+          inputmode="text"
+          pattern="^[A-Za-z][A-Za-z\s'-]{1,}$"
+          aria-describedby="name-hint"
+          placeholder="Enter your name"
+        />
+        <small id="name-hint">Use letters, spaces, hyphens or apostrophes.</small>
+        <!-- If you expect non-Latin names, remove the pattern entirely. -->
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          autocomplete="email"
+          placeholder="name@example.com"
+        />
+
+        <label for="birthdate">Birth date</label>
+        <input
+          type="date"
+          name="birthdate"
+          id="birthdate"
+          autocomplete="bday"
+        />
+
+        <label for="age">Age</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          inputmode="numeric"
+          step="1"
+          min="15"
+          max="80"
+          aria-describedby="age-hint"
+        />
+        <small id="age-hint">15–80 years.</small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <fieldset>
+          <legend>Subscription type</legend>
+          <label>
+            <input type="radio" name="subs" id="basic" value="basic" checked />
+            Basic
+            <!-- instead of for attribute -->
+          </label>
+          <label>
+            <input type="radio" name="subs" id="premium" value="premium" />
+            Premium
+          </label>
+        </fieldset>
+
+        <label for="newsletter">Subscribe to newsletter?</label>
+        <input type="checkbox" name="newsletter" id="newsletter" value="yes" checked />
+
+        <label for="country">Country</label>
+        <select name="country" id="country" autocomplete="country-name">
+          <option value="">Select a country…</option>
+          <option value="uk">United Kingdom</option>
+          <option value="sy">Syria</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your message</legend>
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="8"
+          maxlength="2000"
+          placeholder="How can we help?"
+        ></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>More examples</legend>
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          autocomplete="new-password"
+          minlength="8"
+          aria-describedby="pwd-hint"
+        />
+        <small id="pwd-hint">At least 8 characters.</small>
+
+        <label for="telephone">Phone number</label>
+        <input
+          type="tel"
+          name="telephone"
+          id="telephone"
+          inputmode="tel"
+          pattern="^\+?\d{10,15}$"
+          placeholder="+447911123456"
+          aria-describedby="tel-hint"
+        />
+        <small id="tel-hint">Digits only, 10–15 characters (adjust to your locale).</small>
+
+        <label for="web">Website</label>
+        <input
+          type="url"
+          name="web"
+          id="web"
+          placeholder="https://example.com"
+          pattern="https?://.+"
+          autocomplete="url"
+        />
+      </fieldset>
+
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <!-- FILE UPLOAD (separate submission) -->
+    <section aria-labelledby="file-title">
+      <h2 id="file-title">Upload a file</h2>
+      <form action="index.html" method="post" enctype="multipart/form-data">
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" />
+        <button type="submit">Upload</button>
+      </form>
+      <!-- If you want everything in ONE submission, move this file input into the form above. -->
+    </section>
+  </main>
+</body>
+</html>
+<!-- Summary of key improvements
+Fixed all typos, broken/missing attributes, and invalid HTML (required, id="", labels ↔ inputs, removed align, removed layout <br>).
+
+Added proper structure (<header>, <main>), better grouping with <fieldset><legend>, and correct radio-group semantics.
+
+Improved accessibility: visible format hints with aria-describedby, sensible autocomplete, required on critical fields.
+
+Safer patterns and placeholders (and a note to drop the name pattern if you accept non-Latin names).
+
+Basic SEO: descriptive <title> + meta description.
+
+Kept forms separate but clarified they submit independently; showed how to unify if needed.
+
+If you want me to run a W3C validator pass and tighten patterns for UK phone numbers specifically, paste your target locale and I’ll tune it. -->

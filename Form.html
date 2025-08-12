@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Contact information</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Personal information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"  required minlength="2" title="A-Za-z" placeholder="Enter your name" pattern="[A-Za-z]+">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" title="Example@gmail.com" placeholder="Enter your email">
+
+            <label for="birthdate">Birthdate</label>
+            <input type="date" name="birthdate" id="birthdate">
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" step="1" min="15" title="Age should be between 15 to 80" max="80">
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <h2>subsciption Type</h2>
+            <label for="basic">Basic</label>
+            <input type="radio" name="subs" id="basic" value="basic" checked>
+
+            <label for="premium">Priemum</label>
+            <input type="radio" name="subs" id="premium" value="premium">
+
+            <h2>Newsletter</h2>
+            <label for="newsletter">Subscribe to newsletter?</label>
+            <input type="checkbox" name="newsletter" id="newsletter" checked>
+
+            <label for="country">country</label>
+            <select name="country" id="country">
+                <option value="UK">United Kingdom</option>
+                <option value="SY">Syria</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+      <legend>Your message</legend> 
+           <label for="message">message</label>
+           <textarea name="message" id="message" rows="8"></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend> More Examples</legend>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required >
+            <label for="telphone">Phone number</label>
+            <input type="tel" name="telephone" pattern="[0-9]{10}" >
+            <label for="web">Web</label>
+            <input type="url" name="web" pattern="https?://.+">
+        </fieldset>
+
+        <br>
+        <button type="submit" align="center">Submit</button>
+        <button type="reset"> Reset</button>
+    </form>
+
+    <form action="index.html" method="post" enctype="multipart/form-data">
+        <br>
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" >
+        <button type="submit">Upload</button>
+    </form>
+</body>
+
+</html>

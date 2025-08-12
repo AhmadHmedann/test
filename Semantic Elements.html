@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements</title>
+    <style>
+        bode {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header,
+        footer,
+        article,
+        nav,
+        aside {
+            border: 1px solid #ccc;
+            padding: 8px;
+            margin: 8px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #555;
+        }
+
+        time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="Content">Content</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <header>
+                <h2>The Important Of Semantic HTML </h2>
+                <p>Published on <time datetime="2023-01-8T9:00"> January 23, 2023</time>.</p>
+            </header>
+            <figure>
+                <img src="Images/html.png" alt="HTML Logo" width="90" height="auto">
+                <figcaption>HTML5 is the latest evoulution of the standard the dfines HTML</figcaption>
+            </figure>
+            <p>Using <mark>semantic elements</mark> in HTML helps improve accessibility and search engine optimiation.
+                Semantic tags provide informatim about the contents of those tags, making it easier for search engines
+                and assistive devices to serve users better.</p>
+            <footer>
+                <p>Writing by <cite>Ahmad Team</cite>.</p>
+            </footer>
+        </article>
+        <aside>
+            <h2>Related posts </h2>
+            <ul>
+                <li><a href="lists and table.html"> List and table In HTML</a></li>
+                <li><a href="Iframe learn project.html">Iframe Learn project</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2>Comments</h2>
+            <details>
+                <summary>View Comments</summary>
+                <p>You're the best</p>
+                <p>It is so usful </p>
+            </details>
+        </section>
+        <section>
+          <p>The term <dfn title="HyperText Markup Language">HTML</dfn> stands for Hypertext Markup Language, which is the standard language used to create and design web pages.
+        <br> we Deffintion  The term jout once in our page. </p>
+        <p>The <abbr title="World Health Organization">WHO</abbr> plays a key role in global health issues.</p> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ahmad Team. All rights reserved.</p>
+        <ul>
+            <li> <a
+                    href="mailto:ahmadhm2022@gmail.com?cc=ahmadlovie2022@gmail.com&bcc=anonymous@gmail.com&subject=Greeting&body=Hi there"
+                    >Mail
+                    Us with cc and bcc</a></li>
+            <li> <a href="tel:+447480154052">Call Us</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
